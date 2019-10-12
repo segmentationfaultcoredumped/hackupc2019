@@ -53,7 +53,15 @@ module.exports = {
             if(!valid) {
                 throw new UserInputError('Errors', { errors });
             }
-
+            // Make sure user doesnt already exist
+            const user = await User.findOne({ username });
+            if(user) {
+                throw new UserInputError('username is taken', {
+                    errors: {
+                        username: 'This username is taken'
+                    }
+                })
+            }
             password = await bcrypt.hash(password, 12);
 
             const newUser = new User({
@@ -65,15 +73,7 @@ module.exports = {
                 //TODO: buscar els tags i guardarlos a dins del usuari
             });
 
-            // Make sure user doesnt already exist
-            const user = await User.findOne({ username });
-            if(user) {
-                throw new UserInputError('username is taken', {
-                    errors: {
-                        username: 'This username is taken'
-                    }
-                })
-            }
+            
 
             const res = await newUser.save();
             const token = generateToken(res);

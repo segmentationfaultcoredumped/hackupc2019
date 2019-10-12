@@ -13,6 +13,9 @@ module.exports = gql`
         username: String!
         createdAt: String!
     }
+    type Chat{
+        id: ID!
+    }
     input RegisterInput {
         username: String!
         password: String!
@@ -26,5 +29,6 @@ module.exports = gql`
     type Mutation{
         register(registerInput: RegisterInput): User!
         login(username: String!, password: String!): User!
+    
     }  
 `;
