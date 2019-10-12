@@ -2,7 +2,7 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from rest_api_demo.api.restplus import api
+from flaskServer.api.restplus import api
 
 log = logging.getLogger(__name__)
 

@@ -2,11 +2,11 @@ import logging.config
 
 import os
 from flask import Flask, Blueprint
-from rest_api_demo import settings
-from rest_api_demo.api.blog.endpoints.xat import ns as xat_namespace
-from rest_api_demo.api.restplus import api
-from rest_api_demo.database import db
-from rest_api_demo.api.blog import xatHandler
+from flaskServer import settings
+from flaskServer.api.blog.endpoints.xat import ns as xat_namespace
+from flaskServer.api.restplus import api
+from flaskServer.database import db
+from flaskServer.api.blog import xatHandler
 
 app = Flask(__name__)
 logging_conf_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../logging.conf'))
