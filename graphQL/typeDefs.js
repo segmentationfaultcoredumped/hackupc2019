@@ -2,8 +2,8 @@ const { gql } = require('apollo-server');
 
 module.exports = gql`
     type Tag {
-        id:ID,
-        name: String!,
+        id:ID!
+        name: String!
         relatedTags: [String]
     }
     type User{
