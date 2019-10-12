@@ -1,5 +1,4 @@
 const { ApolloServer } = require('apollo-server');
-
 const mongoose = require('mongoose');
 
 const typeDefs = require('./graphQL/typeDefs');
