@@ -7,10 +7,10 @@ const { SECRET_KEY } = require('../../config');
 const User = require('../../models/User');
 
 function generateToken(user) {
-    jwt.sign({
+    return jwt.sign({
         id: user.id,
-        email: res.email,
-        username: res.username
+        email: user.email,
+        username: user.username
     }, SECRET_KEY, {expiresIn: '1h'});
 }
 
