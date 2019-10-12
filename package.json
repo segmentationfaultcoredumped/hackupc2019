@@ -1,0 +1,30 @@
+{
+  "name": "hackupc2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentationfaultcoredumped/hackupc2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/segmentationfaultcoredumped/hackupc2019/issues"
+  },
+  "homepage": "https://github.com/segmentationfaultcoredumped/hackupc2019#readme",
+  "dependencies": {
+    "apollo-server": "^2.9.6",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
