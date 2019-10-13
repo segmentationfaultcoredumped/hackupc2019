@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Container } from 'semantic-ui-react'
+
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
+
+import ListMenu from './components/list-menu';
+
+import Home from './pages/home';
+import Login from './pages/login';
+import Logout from './pages/logout';
+import Register from './pages/register';
+import Profile from './pages/profile';
+import TopicSelector from './pages/selectTopics';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <ListMenu />
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/login' component={Login}/>
+        <Route exact path='/logout' component={Logout}/>
+        <Route exact path='/register' component={Register}/>
+        <Route exact path='/profile' component={Profile}/>
+        <Route exact path='/selectTopics' component={TopicSelector}/>
+      </Container>
+    </Router>
   );
 }
 
