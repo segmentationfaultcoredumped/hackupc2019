@@ -5,7 +5,7 @@ const usersResolvers = require('./users');
 module.exports = {
     Query: {
         ...chatsResolvers.Query,
-        ...tagsResolvers.Query
+        ...tagsResolvers.Query,
 
     },
     Mutation: {
