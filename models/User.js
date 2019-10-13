@@ -15,7 +15,13 @@ const userSchema= new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
     }],
-    createdAt: String
+    createdAt: String,
+    chat: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'chats'
+        }
+    ]
 });
 
 module.exports = model('User', userSchema);

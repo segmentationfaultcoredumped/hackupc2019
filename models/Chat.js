@@ -8,7 +8,9 @@ const chatSchema= new Schema({
     },
     createdAt: String,
     topic: String,
-    type: String
+    type: String,
+    date: String,
+    sentiment: Number
 });
 
 module.exports = model('Chat', chatSchema);
