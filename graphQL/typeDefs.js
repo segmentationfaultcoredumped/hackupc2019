@@ -6,15 +6,25 @@ module.exports = gql`
         name: String!
         relatedTags: [String]
     }
+    type Chat {
+        id: ID!
+        users: [String]!
+        messages: [Message]
+        createdAt: String!
+        topic: String!
+    }
+    type Message {
+        id: ID!
+        user: String!
+        body: String!
+        sentAt: String!
+    }
     type User{
         id: ID!
         email: String!
         token: String!
         username: String!
         createdAt: String!
-    }
-    type Chat{
-        id: ID!
     }
     input RegisterInput {
         username: String!
@@ -25,6 +35,7 @@ module.exports = gql`
     }
     type Query{
         getTags: [Tag]
+        getChats: [Chat]
     }
     type Mutation{
         register(registerInput: RegisterInput): User!

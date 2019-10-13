@@ -2,7 +2,7 @@ const Tag = require('../../models/Tag');
 
 module.exports = {
     Query: {
-        async getTags(){
+        async getTags() {
             try{
                 const tags = await Tag.find();
                 return tags;

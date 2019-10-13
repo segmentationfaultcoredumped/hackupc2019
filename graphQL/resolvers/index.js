@@ -4,9 +4,11 @@ const usersResolvers = require('./users');
 
 module.exports = {
     Query: {
-        ...chatsResolvers.Query
+        ...chatsResolvers.Query,
+        ...tagsResolvers.Query,
+
     },
     Mutation: {
         ...usersResolvers.Mutation
     }
-};
+}
