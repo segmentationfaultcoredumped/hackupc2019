@@ -3,12 +3,11 @@ import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
 function Home() {
-    const {loading, data: { getTags: tags } } = useQuery(FETCH_CHAT_QUERY);
-/*    
+    const {loading, data } = useQuery(FETCH_CHAT_QUERY);
+  
     if(data){
         console.log(data);
     }
-    */
     return (
         <div>
             Home Page
@@ -24,6 +23,7 @@ function Home() {
                             1 Hour Ago
                         </div>
                     </div>
+                    Subscribe toPewdiePie
                 </div>
             </div>
         </div>
