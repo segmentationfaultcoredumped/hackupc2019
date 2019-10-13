@@ -3,8 +3,10 @@ const { model, Schema } = require('mongoose');
 const chatSchema= new Schema({
     users: [String],
     messages: [{
-        type: Schema.Types.ObjectId,
-        ref: 'messages'
+        id: Schema.Types.ObjectId,
+        user: String,
+        body: String,
+        sentAt: String
     }],
     createdAt: String,
     topic: String
