@@ -6,7 +6,6 @@ const chatSchema= new Schema({
         type: Schema.Types.ObjectId,
         ref: 'messages'
     }],
-    // messages: [String],
     createdAt: String,
     topic: String
 });

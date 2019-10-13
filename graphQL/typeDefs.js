@@ -6,18 +6,18 @@ module.exports = gql`
         name: String!
         relatedTags: [String]
     }
-    # type Message {
-    #     id: ID!
-    #     user: String!
-    #     body: String!
-    #     sentAt: Strings!
-    # }
     type Chat {
         id: ID!
-        users: [String]
-        messages: [String]
+        users: [String]!
+        messages: [Message]
         createdAt: String!
         topic: String!
+    }
+    type Message {
+        id: ID!
+        user: String!
+        body: String!
+        sentAt: String!
     }
     type User{
         id: ID!
